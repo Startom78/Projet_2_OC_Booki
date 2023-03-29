@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* NORMALIZATION */
+
+*{
+    margin : 0px;
+    padding: 0px;   
+}
+
+body {
+    max-width: 1440px;
+    margin : 0 auto;
+    font-family: Raleway, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header, main, footer {
+    padding: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+i.fas {
+    color: #0065FC;
+}
+
+
+/* HEADER */
+
+header {
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 22px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 126px;
+}
+.nav img {
+    width : auto;
+    height: 25px;
+}
+.nav nav {
+    display : flex;
+    height :100%;
+}
+.nav nav a {
+    display : flex;
+    height: 100%;
+    width : 160px;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid transparent;
+}
+.nav nav a:hover {
+    border-top: 3px solid blue;
+}
+
+
+/* MAIN */
+
+/* FILTERS */
+
+.filter_bar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 15px;
+    gap: 15px 30px;
+}
+
+.filter {
+    border:1px  solid #D9D9D9;
+    padding: 10px 19px;
+    border-radius: 25px;
+}
+
+.filter a {
+    font-weight: 700;
+    font-size: 17px;
+}
+.filter:hover {
+    background: #DEEBFF;
+}
+
+
+/* HOSTS */
+
+.hosts {
+    display : flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.hosts section {
+    background-color: #F2F2F2;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.hosts section .title {
+    margin-bottom: 26px;
+}
+
+.section_host {
+    width : calc(100% - 420px);
+}
+
+.section_popular {
+    width : 420px;
+}
+
+.cards {
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap : 10px;
+    width: 100%;
+}
+
+.card {
+    /* margin : 10px; */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius : 20px;
+    width : 200px;
+    box-shadow : 0px 10px 20px 0px #0003;
+    overflow: hidden;
+}
+
+
+.card img {
+    width : calc(100% - 10px);
+    height : 114px;
+    object-fit: cover;
+    border-radius : 16px 16px 0 0 ;
+    margin : 5px;
+}
+
+.card .description {
+    margin : 0 16px 10px 16px;
+}
+.card .description h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.card .description p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.type2 .card {
+    flex-direction: row;
+    max-height: 144px;
+    width: 100%;
+}
+
+.type2 .card img {
+    border-radius: 16px 0 0 16px;
+    height: calc(100%-10px);
+    width: 127px;
+}
+
+.type2 .card .description {
+    margin : 16px 16px 10px 16px;
+}
+
+/* Activities */
+
+
+.section_activities {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    }
+
+    .section_activities h2 {
+        width: 100%;
+    }
+.card3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius : 20px;
+    width : 20%;
+    height: 302px;
+    box-shadow : 0px 10px 20px 0px #0003;
+    overflow: hidden;
+}
+
+img {
+    height: 80%;
+    object-fit: cover;
+}
+
+
+/* FOOTER */
+
+.footer {
+    display : flex;
+    background-color: #F2F2F2;
+}
+
+.footer div {
+    width : 33%;
+}
+
+@media screen and (max-width :992px) {
+    .hosts {
+        flex-direction: column;
+    }
+    .section_host {
+        width : 100%;
+    }
+}
