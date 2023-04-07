@@ -33,9 +33,14 @@ i.fas {
 }
 
 i.fa-info {
-    border: 6px solid  #f2f2f2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid  #D9D9D9;
     border-radius: 50%;
-
+    background: none;
 }
 
 i.fa-location-dot {
@@ -83,13 +88,45 @@ table {
     border-collapse: collapse;
 }
 
-.search_bar2 {
+.search_form {
     width: 100px;
 }
+
 .search_button {
     color: #0065FC;
     width: 100px;
 }
+
+.ranking_stars .fa-star{
+    color: #F2F2F2;
+}
+
+.ranking_1 .fa-star:nth-child(-n+1){
+    color: #0065FC;
+}
+
+.ranking_2 .fa-star:nth-child(-n+2){
+    color: #0065FC;
+}
+.ranking_3 .fa-star:nth-child(-n+3){
+    color: #0065FC;
+}
+
+.ranking_4 .fa-star:nth-child(-n+4){
+    color: #0065FC;
+}
+
+.ranking_5 .fa-star:nth-child(-n+5){
+    color: #0065FC;
+}
+
+
+
+
+
+
+
+
 
 /* MAIN */
 
@@ -117,6 +154,9 @@ table {
 }
 
 .filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     border:1px  solid #D9D9D9;
     padding: 10px 19px;
     border-radius: 25px;
