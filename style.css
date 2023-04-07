@@ -32,6 +32,17 @@ i.fas {
     color: #0065FC;
 }
 
+i.fa-info {
+    border: 6px solid  #f2f2f2;
+    border-radius: 50%;
+
+}
+
+i.fa-location-dot {
+    border: 10px solid #F2F2F2;
+    
+}
+
 
 /* HEADER */
 
@@ -68,6 +79,17 @@ header h1 {
     border-top: 3px solid blue;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+.search_bar2 {
+    width: 100px;
+}
+.search_button {
+    color: #0065FC;
+    width: 100px;
+}
 
 /* MAIN */
 
@@ -191,6 +213,10 @@ header h1 {
     margin : 16px 16px 10px 16px;
 }
 
+ h3 {
+    
+}
+
 /* Activities */
 
 
@@ -241,6 +267,11 @@ header h1 {
 .footer {
     display : flex;
     background-color: #F2F2F2;
+
+}
+ /* trying adding a padding to footer */
+.footer h2 a {
+    margin: 70px;
 }
 
 .footer div {
