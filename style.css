@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 /* NORMALIZATION */
 
@@ -56,25 +56,22 @@ i.fa-location-dot {
 header {
     margin-bottom: 20px;
 }
-header h1 {
-    font-size: 22px;
-}
 
-.nav {
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 126px;
 }
-.nav img {
+.flex img {
     width : auto;
-    height: 25px;
+    height: 19px;
 }
-.nav nav {
+.flex nav {
     display : flex;
     height :100%;
 }
-.nav nav a {
+.flex nav a {
     display : flex;
     height: 100%;
     width : 160px;
@@ -82,12 +79,16 @@ header h1 {
     align-items: center;
     border-top: 3px solid transparent;
 }
-.nav nav a:hover {
+.flex nav a:hover {
     border-top: 3px solid blue;
 }
 
 table {
     border-collapse: collapse;
+}
+
+main h1 {
+    font-size: 22px;
 }
 
 .search_bar{
@@ -130,6 +131,15 @@ table {
 .search_button {
     width: 100px;
     height: 100%;
+    position: relative;
+}
+
+.search_button i{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: white;
 }
 
 .search_button input {
@@ -166,10 +176,16 @@ table {
 
 .ranking_4 .fa-star:nth-child(-n+4){
     color: #0065FC;
+    width: 12px;
+    height: 12px;
 }
 
 .ranking_5 .fa-star:nth-child(-n+5){
     color: #0065FC;
+}
+
+.fa-chart-line {
+    align-items: right;
 }
 
 
@@ -255,6 +271,7 @@ table {
     flex-wrap: wrap;
     gap : 10px 2%;
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 .card {
@@ -273,6 +290,7 @@ table {
 .card img {
     width : calc(100% - 10px);
     height : 114px;
+    min-height: 114px;
     object-fit: cover;
     border-radius : 16px 16px 0 0 ;
     margin : 5px;
@@ -317,7 +335,10 @@ table {
 
 /* Activities */
 
-
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
 .section_activities {
     display: flex;
     margin: 10px;
@@ -357,6 +378,7 @@ table {
     align-items: center;
     height: 40px;
     padding-left : 20px;
+    font-size: 1rem;
 }
 
 
@@ -384,13 +406,13 @@ table {
         width : 48%;
     }
 }
-@media screen and (max-width :992px) {
+@media screen and (max-width :1024px) {
     .hosts {
         flex-direction: column;
     }
     .section_host,
     .section_popular {
-        width : calc(100% - 80px);
+        width : 100%;
     }
     .cards.type2 {
         flex-direction: row;
@@ -403,5 +425,83 @@ table {
     }
     .card {
         width: 32%;
+    }
+    .card .description h3{
+        font-size: clamp(12px, 1.5vw, 16px);
+    }
+    .card .description p{
+        font-size: clamp(10px, 1.2vw, 14px);
+    }
+
+    .type2 .card img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hosts {
+        flex-direction: column-reverse;
+    }
+
+    header, main, footer {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header, .main_description, .search_bar, .filter_bar{
+        margin: 0px 50px 30px 50px;
+    }
+    header {
+        margin: 0 0 30px 0;
+    }
+    header .flex {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+    }
+    .flex nav a {
+        width: 50%;
+    }
+    .flex nav a:hover {
+        border-top: unset;
+        border-bottom: 3px solid blue;
+    }
+
+    .hosts section {
+        border-radius: 0px;
+    }
+
+    section.section_host {
+        background-color: #FFF;
+    }
+
+    .search_button {
+
+        width: 49px;
+
+    }
+
+    .search_button i{
+        
+        display:block;
+        top: 16.5px;
+        left: 16.5px;
+       
+    }
+
+
+    .search_button input {
+        color: transparent;
+        width: 49px;
+        overflow: hidden;
+    }
+
+    .type2 .card {
+        width: 100%;
+    }
+    .type2 .card img {
+        width: 127px;
     }
 }
