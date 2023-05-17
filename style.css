@@ -51,27 +51,30 @@ i.fa-location-dot {
 }
 
 
-/* HEADER */
-
-header {
-    margin-bottom: 20px;
-}
-
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
+}
+
+
+/* HEADER */
+
+header {
+    margin-bottom: 20px;
     height: 126px;
 }
-.flex img {
+
+header img {
     width : auto;
     height: 19px;
 }
-.flex nav {
+header nav {
     display : flex;
     height :100%;
 }
-.flex nav a {
+header nav a {
     display : flex;
     height: 100%;
     width : 160px;
@@ -79,8 +82,8 @@ header {
     align-items: center;
     border-top: 3px solid transparent;
 }
-.flex nav a:hover {
-    border-top: 3px solid blue;
+header nav a:hover {
+    border-top: 3px solid #0065FC;
 }
 
 table {
@@ -89,6 +92,10 @@ table {
 
 main h1 {
     font-size: 22px;
+}
+
+main p {
+    gap:10px;
 }
 
 .search_bar{
@@ -190,6 +197,10 @@ main h1 {
 
 
 
+header, .main_description, .search_bar, .filter_bar {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
 
 
 
@@ -219,14 +230,15 @@ main h1 {
     justify-content: start;
     margin-left: 15px;
     gap: 15px 30px;
+    width: 100%;
 }
 
 .filter {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     border:1px  solid #D9D9D9;
-    padding: 10px 19px;
+    padding: 10px 13px;
     border-radius: 25px;
 }
 
@@ -449,38 +461,44 @@ main h1 {
     }
 
     header, .main_description, .search_bar, .filter_bar{
-        margin: 0px 50px 30px 50px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     header {
         margin: 0 0 30px 0;
     }
-    header .flex {
+    header img {
+        margin-top: 1.25rem;
+    }
+    header.flex {
         flex-direction: column;
         width: 100%;
     }
+
     nav {
         width: 100%;
     }
-    .flex nav a {
+    header nav a {
         width: 50%;
-    }
-    .flex nav a:hover {
         border-top: unset;
-        border-bottom: 3px solid blue;
+        border-bottom: 3px solid transparent;
+    }
+    header nav a:hover {
+        border-top: unset;
+        border-bottom: 3px solid #0065FC;
     }
 
-    .hosts section {
-        border-radius: 0px;
+    .search_bar {
+        width: calc(100% - 41px);
+        max-width: 332px;
     }
 
-    section.section_host {
-        background-color: #FFF;
+    .search_form {
+        width: calc(100% - 100px);
     }
 
     .search_button {
-
         width: 49px;
-
     }
 
     .search_button i{
@@ -496,6 +514,32 @@ main h1 {
         color: transparent;
         width: 49px;
         overflow: hidden;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        align-items: start;
+        gap:1rem;
+    }
+    .filters {
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 0;
+    }
+    .filter {
+        width: calc(50% - 7px);
+        min-width: 145px;
+    }
+    .filter a {
+        font-size: 11px;
+    }
+
+    .hosts section {
+        border-radius: 0px;
+    }
+
+    section.section_host {
+        background-color: #FFF;
     }
 
     .type2 .card {
