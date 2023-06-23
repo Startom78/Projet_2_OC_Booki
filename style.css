@@ -428,7 +428,7 @@ header, .main_description, .search_bar, .filter_bar {
         width : 48%;
     }
 }
-@media screen and (max-width :1024px) {
+@media screen and (max-width :1023px) {
     .hosts {
         flex-direction: column;
     }
@@ -461,7 +461,7 @@ header, .main_description, .search_bar, .filter_bar {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .hosts {
         flex-direction: column-reverse;
     }
