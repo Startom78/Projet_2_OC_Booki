@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 /* NORMALIZATION */
 
@@ -16,7 +16,7 @@ body {
 
 header, main, footer {
     margin: 0 5%;
-    padding: 0 15px;
+    padding: 0;
 }
 
 a {
@@ -37,7 +37,7 @@ i.fa-info {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
+    min-width: 24px;
     height: 24px;
     border: 1px solid  #D9D9D9;
     border-radius: 50%;
@@ -51,30 +51,30 @@ i.fa-location-dot {
 }
 
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+
 /* HEADER */
 
 header {
     margin-bottom: 20px;
-}
-header h1 {
-    font-size: 22px;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 126px;
 }
-.nav img {
+
+header img {
     width : auto;
-    height: 25px;
+    height: 19px;
 }
-.nav nav {
+header nav {
     display : flex;
     height :100%;
 }
-.nav nav a {
+header nav a {
     display : flex;
     height: 100%;
     width : 160px;
@@ -82,12 +82,20 @@ header h1 {
     align-items: center;
     border-top: 3px solid transparent;
 }
-.nav nav a:hover {
-    border-top: 3px solid blue;
+header nav a:hover {
+    border-top: 3px solid #0065FC;
 }
 
 table {
     border-collapse: collapse;
+}
+
+main h1 {
+    font-size: 22px;
+}
+
+main p {
+    gap:10px;
 }
 
 .search_bar{
@@ -130,6 +138,15 @@ table {
 .search_button {
     width: 100px;
     height: 100%;
+    position: relative;
+}
+
+.search_button i{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: white;
 }
 
 .search_button input {
@@ -151,6 +168,7 @@ table {
 
 .ranking_stars .fa-star{
     color: #F2F2F2;
+    font-size: 12px;
 }
 
 .ranking_1 .fa-star:nth-child(-n+1){
@@ -166,6 +184,7 @@ table {
 
 .ranking_4 .fa-star:nth-child(-n+4){
     color: #0065FC;
+
 }
 
 .ranking_5 .fa-star:nth-child(-n+5){
@@ -174,6 +193,11 @@ table {
 
 
 
+
+header, .main_description, .search_bar, .filter_bar {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
 
 
 
@@ -203,14 +227,15 @@ table {
     justify-content: start;
     margin-left: 15px;
     gap: 15px 30px;
+    width: 100%;
 }
 
 .filter {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     border:1px  solid #D9D9D9;
-    padding: 10px 19px;
+    padding: 10px 13px;
     border-radius: 25px;
 }
 
@@ -220,6 +245,11 @@ table {
 }
 .filter:hover {
     background: #DEEBFF;
+}
+
+.info {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -255,6 +285,7 @@ table {
     flex-wrap: wrap;
     gap : 10px 2%;
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 .card {
@@ -273,6 +304,7 @@ table {
 .card img {
     width : calc(100% - 10px);
     height : 114px;
+    min-height: 114px;
     object-fit: cover;
     border-radius : 16px 16px 0 0 ;
     margin : 5px;
@@ -311,16 +343,15 @@ table {
     height: 100%;
 }
 
- h3 {
-    
-}
 
 /* Activities */
 
-
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
 .section_activities {
     display: flex;
-    margin: 10px;
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
@@ -333,9 +364,10 @@ table {
 .card_container {
     display : flex;
     flex-direction: row;
-    gap: 2%;
+    gap: 15px;
     width: 100%;
 }
+
 .card3 {
     display: flex;
     flex-direction: column;
@@ -357,6 +389,7 @@ table {
     align-items: center;
     height: 40px;
     padding-left : 20px;
+    font-size: 1rem;
 }
 
 
@@ -365,12 +398,23 @@ table {
 .footer {
     display : flex;
     background-color: #F2F2F2;
+    padding: 45px 70px;
+    gap: 20px;
+
 
 }
  /* trying adding a padding to footer */
-.footer h2 a {
-    margin: 70px;
-}
+
+ .footer h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+ }
+
+ .footer a {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 12px;
+ }
 
 .footer div {
     width : 33%;
@@ -384,13 +428,13 @@ table {
         width : 48%;
     }
 }
-@media screen and (max-width :992px) {
+@media screen and (max-width :1024px) {
     .hosts {
         flex-direction: column;
     }
     .section_host,
     .section_popular {
-        width : calc(100% - 80px);
+        width : 100%;
     }
     .cards.type2 {
         flex-direction: row;
@@ -404,4 +448,180 @@ table {
     .card {
         width: 32%;
     }
+
+    .card .description h3{
+        font-size: clamp(12px, 1.5vw, 16px);
+    }
+    .card .description p{
+        font-size: clamp(10px, 1.2vw, 14px);
+    }
+
+    .type2 .card img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hosts {
+        flex-direction: column-reverse;
+    }
+
+    header, main, footer {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header, .main_description, .search_bar, .filter_bar{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    header {
+        margin: 0 0 30px 0;
+    }
+    header img {
+        margin-top: 1.25rem;
+    }
+    header.flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+    header nav a {
+        width: 50%;
+        border-top: unset;
+        border-bottom: 3px solid transparent;
+    }
+    header nav a:hover {
+        border-top: unset;
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .search_bar {
+        width: calc(100% - 41px);
+        max-width: 332px;
+    }
+
+    .search_form {
+        width: calc(100% - 100px);
+    }
+
+    .search_button {
+        width: 49px;
+    }
+
+    .search_button i{
+        
+        display:block;
+        top: 16.5px;
+        left: 16.5px;
+       
+    }
+
+
+    .search_button input {
+        color: transparent;
+        width: 49px;
+        overflow: hidden;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        align-items: start;
+        gap:1rem;
+    }
+    .filters {
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 0;
+    }
+    .filter {
+        width: calc(50% - 7px);
+        min-width: 145px;
+    }
+    .filter a {
+        font-size: 11px;
+    }
+
+    .hosts section {
+        border-radius: 0px;
+    }
+
+    .section_host {
+        background-color: #FFF;
+    }
+    .section_host .card {
+        width: 48%;
+    }
+
+    .card .description h3 {
+        font-size: clamp(12px, 3.5vw, 16px);
+        /* font-size: 16px; */
+        font-weight: bold;
+    }
+    .card .description p {
+        font-size: clamp(10px, 3.0vw, 14px);
+        /* font-size: 14px; */
+        font-weight: normal;
+    }
+
+    .type2 .card {
+        width: 100%;
+    }
+    .type2 .card img {
+        width: 127px;
+    }
+
+    .section_activities {
+        padding: 0 30px;
+    }
+
+    .card_container {
+        flex-wrap: wrap;
+    }
+
+    .card_container .card3 {
+        width: calc(50% - 8px);
+        flex: unset;
+    }
+
+    .card_container .card3 img {
+        aspect-ratio: 1/0.75;
+        min-height: 120px;
+        max-height: 200px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+    }
+    
+    .footer div{
+        width: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+    
+    .type2 .card img {
+        width: clamp(100px, 30%, 127px);
+    }
+
+    .section_host .card {
+        width: 100%;
+    }
+
+    .card_container {
+        flex-direction: column;
+    }
+
+    .card_container .card3 {
+        width: 100%;
+        flex: 1;
+    }
+
 }
